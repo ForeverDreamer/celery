@@ -43,7 +43,7 @@ def domain(url):
     return urlsplit(url)[1].split(':')[0]
 
 
-@shared_task(ignore_result=True, serializer='pickle', compression='zlib')
+@shared_task(name='examples.eventlet.webcrawler.crawl', ignore_result=True, serializer='pickle', compression='zlib')
 def crawl(url, seen=None):
     print(f'crawling: {url}')
     if not seen:
