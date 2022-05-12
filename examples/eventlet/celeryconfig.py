@@ -8,7 +8,7 @@ import sys
 # the worker too late.
 
 broker_url = 'amqp://guest:guest@localhost:5672//'
-result_backend = os.getenv('CELERY_RESULT_BACKEND', 'redis://')
+result_backend = 'redis://'
 worker_disable_rate_limits = True
 result_expires = 30 * 60
 

@@ -11,4 +11,4 @@ def urlopen(url):
     except requests.exceptions.RequestException as exc:
         print(f'-url {url} gave error: {exc!r}')
         return
-    return len(response.text)
+    return len(response.text), response.text
